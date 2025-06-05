@@ -27,11 +27,11 @@ app.set("view engine", "ejs");
 
 // remove this when i wanna put the database up
 app.get("/database", async (req, res, next) => {
-    res.status(403).sendFile(path.join(__dirname + "../403.html"))
+    res.status(403).sendFile(path.join(__dirname + ".." + "/403.html"))
 })
 
 app.post("/database", async (req, res, next) => {
-    res.status(403).sendFile(path.join(__dirname + "../403.html"))
+    res.status(403).sendFile(path.join(__dirname + ".." + "/403.html"))
 })
 
 /* everything commented is database code, i disabled it for you for... certain reasons
@@ -40,7 +40,7 @@ app.get("/database", async (req, res, next) => {
 })
 
 app.post("/database", jsonParser, (req, res) => {
-    let dataFile = JSON.parse(fs.readFileSync(path.join(__dirname + "/data.json")));
+    let dataFile = JSON.parse(fs.readFileSync(path.join(__dirname + "../data.json")));
     if (req.body.name.trim().length != 0 && req.body.userID != null && req.body.cash != null) {
         for (let i = 0; i < dataFile.length; i++) {
             if (dataFile[i].userID == req.body.userID) {
@@ -52,7 +52,7 @@ app.post("/database", jsonParser, (req, res) => {
     } else {
         res.status(400).send("status 400")
     }
-    fs.writeFile(path.join(__dirname + "/data.json"),JSON.stringify(dataFile), (err) => {
+    fs.writeFile(path.join(__dirname + "../data.json"),JSON.stringify(dataFile), (err) => {
         if (err) throw err;
         return;
     })
@@ -60,12 +60,12 @@ app.post("/database", jsonParser, (req, res) => {
 })
 
 */
-app.use(express.static(path.join(__dirname + "../static"), {
+app.use(express.static(path.join(__dirname + ".." + "/static"), {
     extensions: ["html", "htm"],
 }));
 
 app.use(function(req,res){
-    res.status(404).sendFile(path.join(__dirname + "../404.html"));
+    res.status(404).sendFile(path.join(__dirname + ".." + "/404.html"));
 });
 
 app.listen(port, () => {
