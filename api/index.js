@@ -27,11 +27,11 @@ app.set("view engine", "ejs");
 
 // remove this when i wanna put the database up
 app.get("/database", async (req, res, next) => {
-    res.status(403).sendFile(path.join(__dirname + ".." + "/403.html"))
+    res.status(403).sendFile(path.join(__dirname + "/403.html"))
 })
 
 app.post("/database", async (req, res, next) => {
-    res.status(403).sendFile(path.join(__dirname + ".." + "/403.html"))
+    res.status(403).sendFile(path.join(__dirname + "/403.html"))
 })
 
 /* everything commented is database code, i disabled it for you for... certain reasons
@@ -60,14 +60,14 @@ app.post("/database", jsonParser, (req, res) => {
 })
 
 */
-app.use(express.static(path.join(__dirname + ".." + "/static"), {
+app.use(express.static(path.join(__dirname + "/static"), {
     extensions: ["html", "htm"],
 }));
 
 app.get("/", (req, res) => res.sendFile("/static/index.html"))
 
 app.use(function(req,res){
-    res.status(404).sendFile(path.join(__dirname + ".." + "/404.html"));
+    res.status(404).sendFile(path.join(__dirname + "/404.html"));
 });
 
 app.listen(port, () => {
