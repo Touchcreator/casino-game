@@ -40,7 +40,7 @@ app.get("/database", async (req, res, next) => {
 })
 
 app.post("/database", jsonParser, (req, res) => {
-    let dataFile = JSON.parse(fs.readFileSync(path.join(__dirname + "../data.json")));
+    let dataFile = JSON.parse(fs.readFileSync(path.join(__dirname + "/data.json")));
     if (req.body.name.trim().length != 0 && req.body.userID != null && req.body.cash != null) {
         for (let i = 0; i < dataFile.length; i++) {
             if (dataFile[i].userID == req.body.userID) {
@@ -52,7 +52,7 @@ app.post("/database", jsonParser, (req, res) => {
     } else {
         res.status(400).send("status 400")
     }
-    fs.writeFile(path.join(__dirname + "../data.json"),JSON.stringify(dataFile), (err) => {
+    fs.writeFile(path.join(__dirname + "/data.json"),JSON.stringify(dataFile), (err) => {
         if (err) throw err;
         return;
     })
@@ -60,20 +60,14 @@ app.post("/database", jsonParser, (req, res) => {
 })
 
 */
-app.use(express.static(path.resolve("/static"), {
+app.use(express.static(path.join(__dirname + "/static"), {
     extensions: ["html", "htm"],
 }));
 
-app.get("/", (req, res) => {
-    res.sendFile("index.html", {root: path.join(__dirname, "..", "public")})
-})
-
 app.use(function(req,res){
-    res.status(404).sendFile(path.resolve("/404.html"));
+    res.status(404).sendFile(path.join(__dirname + "/404.html"));
 });
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}!`);
 });
-
-module.exports = app;
