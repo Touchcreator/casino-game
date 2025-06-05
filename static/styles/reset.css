@@ -1,0 +1,19 @@
+/* look i actually started splitting css files */
+
+#game-section {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #1e2623;
+    border-radius: 10px;
+    height: 60vh;
+    width: 50vh;
+    text-align: center;
+    transition: all ease-in 0.1s;
+    padding: 20px;
+
+}
+
+#game-section:hover {
+    transform: scale(1.02);
+}

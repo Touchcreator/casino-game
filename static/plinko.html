@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.15.0/matter.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/globalHead.js"></script>
+    <title>Casino Street Zone</title>
+</head>
+<body>
+    <section id="game-section">
+        <div id="left">
+            <input type="number" id="bet-amount" value="10">
+            <div id="bets">
+                <input class="bet-btn" id="all-in" type="button" value="All In">
+                <input class="bet-btn" id="half-bet" type="button" value="1/2x Bet">
+                <input class="bet-btn" id="double-bet" type="button" value="2x Bet">
+                <input class="bet-btn" id="tenx-bet" type="button" value="10x Bet">
+            </div>
+            <input type="button" id="play-btn" value="Play">
+            <p>Multiplier Values:
+
+                16x, 9x, 2x, 1.4x, 1.4x, 1.2x, 1.1x, 1x, 0.5x, 1x, 1.1x, 1.2x, 1.4x, 1.4x, 2x, 9x, 16x
+                (i couldn't figure out how to render text 💀)
+            </p>
+        </div>
+        <div id="right"><canvas id="plinko"></canvas></div>
+    </section>
+<script type="module" src="./scripts/plinko.js"></script>
+
+</body>
+</html>

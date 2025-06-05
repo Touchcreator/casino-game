@@ -1,0 +1,20 @@
+{
+  "name": "casino-street-zone-dynamic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Touchcreator",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.5.32",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.19.7"
+  }
+}

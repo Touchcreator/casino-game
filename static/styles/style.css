@@ -1,0 +1,157 @@
+:root {
+    --mine-size: 80px;
+}
+
+body {
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    color: white;
+    background-color: #0a1411;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: gray;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #1e2623;
+    height: 3vh;
+    align-content: center;
+    margin-top: 15px;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    font-size: 16pt;
+    transition: all ease-in 0.1s;
+}
+
+nav p {
+    margin-left: 20px;
+    color: white;
+    font-size: 25pt;
+    font-weight: 100;
+}
+
+#game-section > div {
+    display: flex;
+    background-color: #1e2623;
+    border-radius: 10px;
+    flex-direction: column;
+    margin: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#cash-span {
+    display: table;
+    padding: 15px;
+    background-color: #37534a;
+    width: auto;
+    border-radius: 10px;
+    margin: 15px auto;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: center;
+    height: 3vh;
+}
+
+#left {
+    display: flex;
+    width: 15%;
+}
+
+#right {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: auto;
+    padding: 10px;
+    margin: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #37534a;
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    text-wrap: wrap;
+    transition: all ease-in 0.1s;
+}
+
+input:hover, nav a:hover, .cell:hover {
+    transform: scale(1.05);
+}
+
+#game-section {
+    height: 78vh;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-top: 7.5px;
+}
+
+#right > h1 {
+    text-align: center;
+}
+
+#play-btn {
+    background-color: rgb(44, 187, 0);
+    font-weight: 900;
+    size: 15pt;
+}
+
+.cell {
+    width: var(--mine-size);
+    height: var(--mine-size);
+    background-color: #37534a;
+    border-radius: 10px;
+    margin: 5px;
+    transition: all ease-in 0.1s;
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 500px;
+}
+
+.mine {
+    background-color: red;
+}
+
+.revealed {
+    background-color: green;
+}
+
+#cash-out {
+    background-color: #111a17;
+}
+
+#bets {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#bets > input {
+    height: 8vh;
+    width: 5vw;
+}

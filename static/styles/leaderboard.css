@@ -1,0 +1,19 @@
+#game-section {
+    height: 0
+}
+
+#leaderboard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#table-div {
+    display: flex;
+    background-color: #37534a;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 15px
+}

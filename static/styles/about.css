@@ -1,0 +1,9 @@
+#game-section {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 10px;
+    background-color: #1e2623;
+    padding: 10px;
+    height: 70vh;
+    flex-direction: column;
+}

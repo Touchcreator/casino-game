@@ -1,0 +1,16 @@
+#games {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#games img {
+    height: 250px;
+    margin: 15px;
+    transition: all ease-in 0.1s;
+}
+
+#games img:hover {
+    transform: scale(1.05);
+}
