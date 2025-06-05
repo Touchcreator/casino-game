@@ -64,7 +64,9 @@ app.use(express.static(path.resolve("/static"), {
     extensions: ["html", "htm"],
 }));
 
-app.get("/", (req, res) => res.sendFile("/static/index.html"))
+app.get("/", (req, res) => {
+    res.sendFile("index.html", {root: path.join(__dirname, "public")})
+})
 
 app.use(function(req,res){
     res.status(404).sendFile(path.resolve("/404.html"));
