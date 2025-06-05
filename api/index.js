@@ -65,7 +65,7 @@ app.use(express.static(path.resolve("/static"), {
 }));
 
 app.get("/", (req, res) => {
-    res.sendFile("index.html", {root: path.join(__dirname, "public")})
+    res.sendFile("index.html", {root: path.join(__dirname, "..", "public")})
 })
 
 app.use(function(req,res){
